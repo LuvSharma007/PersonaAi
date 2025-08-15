@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teacher Persona AI
+---
+
+### Description
+
+This is a **Teacher Persona AI Web App** that simulates realistic conversations with AI versions of your teachers.  
+It is powered by **OpenAI's API** and crafted to respond in a **personalized teacher-like manner**, making it feel like you are interacting with your actual mentors.  
+
+The system uses a **carefully designed system prompt** to define the teacher’s persona, teaching style, and tone, ensuring **accurate role-playing**.  
+This project demonstrates how **system prompts** can shape AI responses, making it perfect for learning **prompt engineering** and conversational AI design.
+
+---
+
+### Tech Stack
+
+- **Frontend Framework:** [Next.js](https://nextjs.org/) (React-based)
+- **Language:** JavaScript (ES6+)
+- **Styling:** Tailwind CSS / Custom CSS
+- **State Management:** React Hooks
+- **AI Integration:** OpenAI API
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Others:** Custom System Prompt Logic
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1️⃣ Clone the Repository
 ```bash
-npm run dev
+git clone https://github.com/YourUsername/Teacher-Persona-AI.git
+cd Teacher-Persona-AI
+
+npm install
 # or
-yarn dev
+yarn install
 # or
-pnpm dev
+pnpm install
 # or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+AI-powered teacher persona conversations
+Customizable system prompt for personality control
+Real-time chat interface
+Minimal and responsive UI
+Educational example of prompt engineering
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
