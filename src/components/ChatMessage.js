@@ -1,4 +1,4 @@
-// components/ChatMessage.jsx
+
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -12,17 +12,28 @@ export default function ChatMessage({ message }) {
           isUser ? "bg-red-500 text-white" : "bg-gray-200 text-gray-900"
         }`}
       >
-        {/* Markdown support for code formatting */}
         <ReactMarkdown
           components={{
-            code({ node, inline, className, children, ...props }) {
-              return !inline ? (
+            pre({ children }) {
+              // render pre safely without being wrapped in <p>
+              return (
                 <pre className="bg-black text-green-400 p-3 rounded-md overflow-x-auto">
-                  <code {...props}>{children}</code>
+                  {children}
                 </pre>
-              ) : (
-                <code className="bg-gray-300 px-1 rounded">{children}</code>
               );
+            },
+            code({ inline, className, children, ...props }) {
+              if (inline) {
+                return (
+                  <code
+                    className="bg-gray-300 px-1 rounded"
+                    {...props}
+                  >
+                    {children}
+                  </code>
+                );
+              }
+              return <code {...props}>{children}</code>;
             },
           }}
         >

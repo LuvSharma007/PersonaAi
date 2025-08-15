@@ -8,11 +8,9 @@ export default function ChatPage() {
   const { mentor } = useParams();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [loader,setLoader] = useState(false);
   const chatEndRef = useRef(null);
 
   useEffect(() => {
-    setLoader(true)
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
@@ -35,18 +33,13 @@ export default function ChatPage() {
       setMessages((prev) => [...prev, aiMessage]);
     } catch (err) {
       console.error(err);
-      setLoader(false)
-    }finally{
-      setLoader(false)
     }
-
     setInput("");
   };
 
   return (
     <div className="relative flex justify-center items-center min-h-screen bg-gray-700 p-4 font-sans">
       
-      {/* Fixed home button in top-left */}
       <Link
         href="/"
         className="absolute top-4 left-4 bg-white text-gray-900 px-4 py-2 rounded-lg shadow hover:bg-gray-200"
@@ -54,7 +47,6 @@ export default function ChatPage() {
         Home
       </Link>
 
-      {/* Chat container */}
       <div className="flex flex-col w-full max-w-5xl h-[85vh] bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200">
         <div className="flex-1 overflow-y-auto p-6">
           {messages.map((m, i) => (
