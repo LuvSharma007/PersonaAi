@@ -27,8 +27,8 @@ This project demonstrates how **system prompts** can shape AI responses, making 
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/YourUsername/Teacher-Persona-AI.git
-cd Teacher-Persona-AI
+git clone https://github.com/LuvSharma007/PersonaAi.git
+cd PersonaAi
 
 npm install
 # or
